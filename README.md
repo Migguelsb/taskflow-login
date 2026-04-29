@@ -6,7 +6,7 @@
 * Login de usuário
 * Adicionar tarefas
 * Listar tarefas
-* Editar tarefas
+* Editar as tarefas
 * Excluir tarefas
 
 Tecnologias
