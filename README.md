@@ -25,3 +25,4 @@ Inicialmente o sistema seria apenas de login, mas foi expandido para incluir um 
 cd src
 python main.py
 ```
+Projeto desenvolvido para fins acadêmicos.
