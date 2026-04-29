@@ -14,7 +14,7 @@ class Dashboard(ctk.CTk):
         self.manager = TaskManager()
 
         
-        self.label = ctk.CTkLabel(self, text="Gerenciador de Tarefas", font=("Arial", 22))
+        self.label = ctk.CTkLabel(self, text=" 📋 Gerenciador de Tarefas", font=("Arial", 22))
         self.label.pack(pady=10)
 
         
