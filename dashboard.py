@@ -30,6 +30,7 @@ class Dashboard(ctk.CTk):
 
         self.update_tasks()
 
+
     def add_task(self):
         task = self.task_entry.get()
         if task:
@@ -37,9 +38,11 @@ class Dashboard(ctk.CTk):
             self.task_entry.delete(0, "end")
             self.update_tasks()
 
+
     def delete_task(self, index):
         self.manager.tasks.pop(index)
         self.update_tasks()
+
 
     def edit_task(self, index):
         edit_window = ctk.CTkToplevel(self)
@@ -53,6 +56,7 @@ class Dashboard(ctk.CTk):
         entry.insert(0, self.manager.tasks[index])
         entry.pack(pady=20)
 
+
         def salvar():
             novo_texto = entry.get()
             if novo_texto:
@@ -62,6 +66,7 @@ class Dashboard(ctk.CTk):
 
         btn_salvar = ctk.CTkButton(edit_window, text="Salvar", command=salvar)
         btn_salvar.pack(pady=10)
+        
 
     def update_tasks(self):
         
