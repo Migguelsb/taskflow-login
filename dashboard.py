@@ -4,6 +4,7 @@ from tasks import TaskManager
 ctk.set_appearance_mode("light")
 ctk.set_default_color_theme("blue")
 
+
 class Dashboard(ctk.CTk):
     def __init__(self):
         super().__init__()
@@ -13,23 +14,23 @@ class Dashboard(ctk.CTk):
 
         self.manager = TaskManager()
 
-        
-        self.label = ctk.CTkLabel(self, text=" 📋 Gerenciador de Tarefas", font=("Arial", 22))
+        self.label = ctk.CTkLabel(
+            self, text=" 📋 Gerenciador de Tarefas", font=(
+                "Arial", 22))
         self.label.pack(pady=10)
 
-        
-        self.task_entry = ctk.CTkEntry(self, placeholder_text="Digite uma nova tarefa...", width=300)
+        self.task_entry = ctk.CTkEntry(
+            self, placeholder_text="Digite uma nova tarefa...", width=300)
         self.task_entry.pack(pady=10)
 
-        self.btn_add = ctk.CTkButton(self, text="Adicionar Tarefa", command=self.add_task)
+        self.btn_add = ctk.CTkButton(
+            self, text="Adicionar Tarefa", command=self.add_task)
         self.btn_add.pack(pady=5)
 
-        
         self.tasks_frame = ctk.CTkFrame(self)
         self.tasks_frame.pack(pady=20, fill="both", expand=True)
 
         self.update_tasks()
-
 
     def add_task(self):
         task = self.task_entry.get()
@@ -38,11 +39,9 @@ class Dashboard(ctk.CTk):
             self.task_entry.delete(0, "end")
             self.update_tasks()
 
-
     def delete_task(self, index):
         self.manager.tasks.pop(index)
         self.update_tasks()
-
 
     def edit_task(self, index):
         edit_window = ctk.CTkToplevel(self)
@@ -51,11 +50,9 @@ class Dashboard(ctk.CTk):
 
         edit_window.grab_set()
 
-
         entry = ctk.CTkEntry(edit_window, width=200)
         entry.insert(0, self.manager.tasks[index])
         entry.pack(pady=20)
-
 
         def salvar():
             novo_texto = entry.get()
@@ -66,10 +63,9 @@ class Dashboard(ctk.CTk):
 
         btn_salvar = ctk.CTkButton(edit_window, text="Salvar", command=salvar)
         btn_salvar.pack(pady=10)
-        
 
     def update_tasks(self):
-        
+
         for widget in self.tasks_frame.winfo_children():
             widget.destroy()
 
