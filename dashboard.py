@@ -13,18 +13,18 @@ class Dashboard(ctk.CTk):
 
         self.manager = TaskManager()
 
-        # Título
+        
         self.label = ctk.CTkLabel(self, text="Gerenciador de Tarefas", font=("Arial", 22))
         self.label.pack(pady=10)
 
-        # Entrada
+        
         self.task_entry = ctk.CTkEntry(self, placeholder_text="Digite uma tarefa", width=300)
         self.task_entry.pack(pady=10)
 
         self.btn_add = ctk.CTkButton(self, text="Adicionar", command=self.add_task)
         self.btn_add.pack(pady=5)
 
-        # Área das tarefas
+        
         self.tasks_frame = ctk.CTkFrame(self)
         self.tasks_frame.pack(pady=20, fill="both", expand=True)
 
@@ -64,7 +64,7 @@ class Dashboard(ctk.CTk):
         btn_salvar.pack(pady=10)
 
     def update_tasks(self):
-        # limpa tela
+        
         for widget in self.tasks_frame.winfo_children():
             widget.destroy()
 
