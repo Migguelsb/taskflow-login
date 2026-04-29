@@ -17,10 +17,10 @@ Tecnologias
 Foi utilizada a metodologia ágil Kanban para organização das tarefas.
 
 
-🔄 Mudança de Escopo
+ Mudança de Escopo
 Inicialmente o sistema seria apenas de login, mas foi expandido para incluir um CRUD completo de tarefas, melhorando a funcionalidade do sistema.
 
-## ▶️ Como executar
+##  Como executar
 ```bash
 cd src
 python main.py
