@@ -6,14 +6,14 @@
 * Login de usuário
 * Adicionar tarefas
 * Listar tarefas
-* Editar as tarefas
+* Editar tarefas
 * Excluir tarefas
 
 Tecnologias
 * Python
 * CustomTkinter
 
- Metodologia
+Metodologia
 Foi utilizada a metodologia ágil Kanban para organização das tarefas.
 
 
