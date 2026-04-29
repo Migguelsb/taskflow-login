@@ -8,7 +8,7 @@ class Dashboard(ctk.CTk):
     def __init__(self):
         super().__init__()
 
-        self.title("TaskFlow")
+        self.title("TaskFlow - Gerenciador")
         self.geometry("600x500")
 
         self.manager = TaskManager()
@@ -21,7 +21,7 @@ class Dashboard(ctk.CTk):
         self.task_entry = ctk.CTkEntry(self, placeholder_text="Digite uma tarefa", width=300)
         self.task_entry.pack(pady=10)
 
-        self.btn_add = ctk.CTkButton(self, text="Adicionar", command=self.add_task)
+        self.btn_add = ctk.CTkButton(self, text="Adicionar Tarefa", command=self.add_task)
         self.btn_add.pack(pady=5)
 
         
