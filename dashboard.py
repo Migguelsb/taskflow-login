@@ -75,7 +75,7 @@ class Dashboard(ctk.CTk):
             label = ctk.CTkLabel(frame, text=task, anchor="w")
             label.pack(side="left", padx=10)
 
-            btn_edit = ctk.CTkButton(frame, text="Editar", width=70,
+            btn_edit = ctk.CTkButton(frame, text=" ✏️ Editar", width=70,
                                      command=lambda i=i: self.edit_task(i))
             btn_edit.pack(side="right", padx=5)
 
