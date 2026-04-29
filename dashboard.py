@@ -18,7 +18,7 @@ class Dashboard(ctk.CTk):
         self.label.pack(pady=10)
 
         
-        self.task_entry = ctk.CTkEntry(self, placeholder_text="Digite uma tarefa", width=300)
+        self.task_entry = ctk.CTkEntry(self, placeholder_text="Digite uma nova tarefa...", width=300)
         self.task_entry.pack(pady=10)
 
         self.btn_add = ctk.CTkButton(self, text="Adicionar Tarefa", command=self.add_task)
