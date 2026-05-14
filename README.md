@@ -22,7 +22,8 @@ Inicialmente o sistema seria apenas de login, mas foi expandido para incluir um 
 
 ##  Como executar
 ```bash
-cd src
+git clone https://github.com/Migguelsb/taskflow-login.git
+cd taskflow-login
 python main.py
 ```
 Projeto desenvolvido para fins acadêmicos.
